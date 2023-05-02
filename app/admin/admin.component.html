@@ -1,0 +1,32 @@
+<div class="content" >
+  <div class="container" fxLayout="row wrapper" fxLayoutAlign="center"  >
+
+      <div class="box" fxHide.sm="hide" fxHide.xs="hide">
+        <div class="img">
+          <img src="../assets/work-stress.svg"  alt="">
+        </div>
+      </div>
+      <div class="box p-5">
+        <h1 class="mb-3 mt-4">A<span>D</span> M <span>I</span> N </h1>
+        <form [formGroup]="admin" (ngSubmit)="adminlogin()" >
+          <div class="group mb-4">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+              <input type="text" formControlName="name" class="form-control"  placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+          </div>
+          <div class="group mb-4">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+              <input type="password" formControlName="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <input type="submit" value="LOGIN" class="lbtn mb-3"  >
+        </form>
+      </div>
+  </div>
+
+
+</div>
+

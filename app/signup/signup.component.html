@@ -1,0 +1,40 @@
+<div class="content">
+  <div class="container" fxLayout="row wrapper" fxLayoutAlign="center"  >
+
+      <div class="box" fxHide.sm="hide" fxHide.xs="hide">
+        <div class="img">
+          <img src="../assets/application-developer.svg"  alt="">
+        </div>
+      </div>
+      <div class="box p-5">
+        <h2 class="mb-3">C<span>R</span>E<span>A</span>T<span>E</span> A<span>C</span>C<span>O</span>U<span>N</span>T</h2>
+        <form [formGroup]="create" (ngSubmit)="savedata()" >
+          <div class="group mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+              <input type="text" class="form-control" formControlName="id" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <small *ngIf="id && id.invalid && id.touched">username required</small>
+          </div>
+          <div class="group mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
+              <input type="email" class="form-control" formControlName="email" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <small *ngIf="email && email.invalid && email.touched">email required</small>
+          </div>
+          <div class="group mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+              <input type="password" class="form-control" formControlName="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <small *ngIf=" password && password.invalid && password.touched">password atleast 6 characters</small>
+          </div>
+          <input type="submit" value="CREATE" class="lbtn mb-3" [disabled]="create.invalid">
+        </form>
+        <p>already have an account? <a href="/login">login</a></p>
+      </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,33 @@
+<div class="content" >
+    <div class="container" fxLayout="row wrapper" fxLayoutAlign="center"  >
+
+        <div class="box" fxHide.sm="hide" fxHide.xs="hide">
+          <div class="img">
+            <img src="../assets/app-sign-in.svg"  alt="">
+          </div>
+        </div>
+        <div class="box p-5">
+          <h1 class="mb-3 mt-4">L <span>O</span> G <span>I</span> N </h1>
+          <form  [formGroup]="login" (ngSubmit)="userlogin()">
+            <div class="group mb-4">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                <input type="text" class="form-control" formControlName="email" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <small *ngIf="email && email.invalid && email.touched"> username required</small>
+            </div>
+            <div class="group mb-4">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+              <small *ngIf=" password && password.invalid && password.touched">password required</small>
+            </div>
+            <input type="submit" value="LOGIN" class="lbtn mb-3"  [disabled]="login.invalid" >
+          </form>
+          <p>don't have an account? <a href="/signup">create account</a></p>
+        </div>
+    </div>
+
+
+</div>

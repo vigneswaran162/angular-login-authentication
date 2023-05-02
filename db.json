@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "vicky",
+      "email": "vigneswaran162@gmail.com",
+      "password": "123456",
+      "isactive": true
+    },
+    {
+      "id": "jana",
+      "email": "jana126@gmail.com",
+      "password": "123456",
+      "isactive": false
+    }
+  ],
+  "admin": [
+    {
+      "id": "admin",
+      "password": "admin"
+    }
+  ]
+}
